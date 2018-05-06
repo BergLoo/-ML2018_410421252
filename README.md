@@ -17,5 +17,5 @@ ML2018第一次作業
 用產生的E′ 的每個像素減去E的再取絕對值，把所有像素的加起來再除以總量得到平均差值：  
 margin of error =  0.4787 
 
-這是生成的E′ ，原檔在image重的E-g  
+這是生成的E′ ，原檔在image中的E-g  
 ![image](https://github.com/BergLoo/-ML2018_410421252/blob/master/image/E-g%20for%20display.jpeg?raw=true)
