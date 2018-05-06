@@ -1,3 +1,4 @@
+#block1 for training w
 from PIL import Image
 import numpy as np
 import matplotlib.image as mpimg
@@ -18,10 +19,12 @@ E = np.array(im4)
 EP = k1
 IP = k1
 
+#will add random function to creat different w  
 w = np.array([[3],[5],[2]])
 
 XD = 0.0000001
 
+#training by gradient descent  
 for i in range(0,299):
     for j in range(0,399):
          wt = w.transpose()
@@ -32,13 +35,16 @@ for i in range(0,299):
          #print ("w = ",w,"\n")
 print ("w = ",w,"\n")
 
-#block2
+#block2 for test and generate  
+
+#generate E prime  
 for i in range(0,299):
     for j in range(0,399):
         EP[i,j] = w[0] * k1[i,j] + w[1] * k2[i,j] + w[2] * I[i,j]
 im5 = Image.fromarray((EP*255))
 im5.show()
 
+#check accuracy by calculate average difference between E[x,y] and EP[x,y]
 me = 0
 for i in range(0,299):
     for j in range(0,399):
