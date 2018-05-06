@@ -27,23 +27,26 @@ for i in range(0,299):
          wt = w.transpose()
          xk = np.array([[k1[i,j]],[k2[i,j]],[I[i,j]]])
          ak = np.dot(wt,xk)
-         print ("i = ",i,"w = ",w," ","wt = ",wt," ","xk = ",xk," ","ak = ",ak[0,0],"E = ",[E[i,j]],"XD = ",XD * ([E[i][j]] - ak)*xk,"\n")
+         #print ("i = ",i,"w = ",w," ","wt = ",wt," ","xk = ",xk," ","ak = ",ak[0,0],"E = ",[E[i,j]],"XD = ",XD * ([E[i][j]] - ak)*xk,"\n")
          w = w + (XD * (([E[i,j]] - ak)*xk))
-         print ("w = ",w,"\n")
+         #print ("w = ",w,"\n")
+print ("w = ",w,"\n")
 
 #block2
 for i in range(0,299):
     for j in range(0,399):
         EP[i,j] = w[0] * k1[i,j] + w[1] * k2[i,j] + w[2] * I[i,j]
-        
 im5 = Image.fromarray((EP*255))
 im5.show()
 
 me = 0
 for i in range(0,299):
     for j in range(0,399):
-        if (E[i,j] != 0):
-            me += ((EP[i,j] - E[i,j])/float(E[i,j]) )
-        print("i = ",i,"j = ",j,"me = ",me,"EP[i,j] = ",EP[i,j],"E[i,j] = ",E[i,j],"\n","(EP[i,j] - E[i,j])/flaot(E[i,j]) = ",(EP[i,j] - E[i,j])/float(E[i,j]),"\n")
+        if EP[i,j] > E[i,j]:
+            me += EP[i,j] - E[i,j]
+        else:
+            me += E[i,j] - EP[i,j]
+        #print("i = ",i,"j = ",j,"me = ",me,"EP[i,j] = ",EP[i,j],"E[i,j] = ",E[i,j],"\n")
+me = float(me)
 me /= (300*400)
-print("margin of error = ",me,"\n") 
+print("margin of error = ",me,"\n")
