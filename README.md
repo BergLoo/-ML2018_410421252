@@ -19,7 +19,7 @@ margin of error =  0.4787
 
 這是生成的E′ ，不過似乎github上不能用灰階的png，這張是jpeg，png原檔在image中的E-g   
 
-![image](https://github.com/BergLoo/-ML2018_410421252/blob/master/image/E-g%20for%20display.jpeg?raw=true)
+![image](https://github.com/BergLoo/-ML2018_410421252/blob/master/image/E-g.jpeg?raw=true)
 
 而這是原檔的E的jpeg檔，直觀上可以比較出十分相似  
 ![image](https://github.com/BergLoo/-ML2018_410421252/blob/master/image/E%20for%20display.jpeg?raw=true)
