@@ -3,11 +3,12 @@ from PIL import Image
 import numpy as np
 import matplotlib.image as mpimg
 import random
-
-im1 = Image.open('/home/bergloo/Desktop/-ML2018_410421252-master/image/key1.png')
-im2 = Image.open('/home/bergloo/Desktop/-ML2018_410421252-master/image/key2.png')
-im3 = Image.open('/home/bergloo/Desktop/-ML2018_410421252-master/image/I.png')
-im4 = Image.open('/home/bergloo/Desktop/-ML2018_410421252-master/image/E.png')
+import os
+add = os.getcwd()
+im1 = Image.open(add+'/image/key1.png')
+im2 = Image.open(add+'/image/key2.png')
+im3 = Image.open(add+'/image/I.png')
+im4 = Image.open(add+'/image/E.png')
 
 #im1.show()
 #im2.show()
@@ -21,7 +22,7 @@ EP = k1
 IP = k1
 
 #will add random function to creat different w  
-w = np.array([[13],[5],[322]])
+w = np.array([[13],[5],[2]])
 
 XD = 0.0000001
 
@@ -36,7 +37,7 @@ for p in range(0,1):
              w = w + (XD * (([E[i,j]] - ak)*xk))
              #print ("w = ",w,"\n")
     print ("w = ",w,"\n")
-    XD = XD * random.randint(0,2)
+
 
 #block2 for test and generate  
 
@@ -51,12 +52,11 @@ im5.show()
 me = 0
 for i in range(0,299):
     for j in range(0,399):
-        if EP[i,j] > E[i,j]:
-            me += EP[i,j] - E[i,j]
+        if IP[i,j] > I[i,j]:
+            me += IP[i,j] - I[i,j]
         else:
-            me += E[i,j] - EP[i,j]
+            me += I[i,j] - IP[i,j]
         #print("i = ",i,"j = ",j,"me = ",me,"EP[i,j] = ",EP[i,j],"E[i,j] = ",E[i,j],"\n")
 me = float(me)
 me /= (300*400)
 print("margin of error = ",me,"\n")
-
