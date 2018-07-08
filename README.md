@@ -5,7 +5,7 @@ w =[[0.25006898] [0.65998043][0.0901495 ]]
 每個像素點的誤差平均值 = 12.3   
 左側是原圖，右側是訓練后生成的圖片  
 有一些奇怪的像素點，感覺是因為alpha比較小在剛開始訓練的時候效果好但是到了後面W差不多接近的時候差值比較小所以需要alpha比較大才有比較明顯的W的改變。  
-這個之後再改進。
+這個之後再改進。  
 ![image](https://github.com/BergLoo/-ML2018_410421252/blob/master/image/I.png?raw=true)
 ![image](https://github.com/BergLoo/-ML2018_410421252/blob/master/image/I-NEW.png?raw=true)
 
