@@ -7,3 +7,5 @@ decoder後面添加了random來訓練，alpha = 0.0000001 * random(1,300)，但�
 目前的結果如下圖,左側為原始圖片，右側為解密后。其他圖片請下載整個repository測試。
 ![image](https://github.com/BergLoo/ML2018_410421252_Image-Decryption-using-Linear-Percetpron/blob/master/image/I.png?raw=true)
 ![image](https://github.com/BergLoo/ML2018_410421252_Image-Decryption-using-Linear-Percetpron/blob/master/image/xd.png?raw=true)
+  
+![image](https://github.com/BergLoo/ML2018_410421252_Image-Decryption-using-Linear-Percetpron/blob/master/image/Screenshot%20from%202018-07-12%2021-58-15.png?raw=true)
